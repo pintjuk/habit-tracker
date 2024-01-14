@@ -1,0 +1,34 @@
+<script type="application/javascript">
+
+function resizeIFrameToFitContent( iFrame , add) {
+
+    iFrame.height = iFrame.contentWindow.document.body.scrollHeight + add;
+}
+
+window.addEventListener('DOMContentLoaded', function(e) {
+
+   var iFrame = document.getElementById( 'bad-habbits-iframe' );
+   resizeIFrameToFitContent( iFrame, 100 );
+
+   var iFrame = document.getElementById( 'good-habbits-iframe' );
+   resizeIFrameToFitContent( iFrame, 100 );
+
+   var iFrame = document.getElementById( 'food-habbits-iframe' );
+   resizeIFrameToFitContent( iFrame, 300 );
+} );
+
+</script>
+<style>
+iframe {
+min-width: 300px;
+max-width: 480px;
+}
+</style>
+<div style="display:flex;flex-wrap:wrap;">
+
+	<iframe id="good-habbits-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdVd8KU7HR69B50ajJ-PtdcoAv8wDbOJVcbhQC8w9OPeFHGpA/viewform?embedded=true" width="640" height="622" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+	<iframe id="bad-habbits-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSeyGVIookLmDWq6I_XLbu8tVDH8d0EFXdojY6sekVe6bIckcw/viewform?embedded=true" width="640" height="546" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+	<iframe id="food-habbits-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScKaYOEMAxxyge-dgKI42FL_r1j3l6zbNd3q8BLioFniBzYBg/viewform?embedded=true" width="640" height="941" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
