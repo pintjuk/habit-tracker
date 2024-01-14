@@ -1,8 +1,15 @@
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
 <script type="application/javascript">
 
 function resizeIFrameToFitContent( iFrame , add) {
 
     iFrame.height = iFrame.contentWindow.document.body.scrollHeight + add;
+
+
 }
 
 window.addEventListener('DOMContentLoaded', function(e) {
@@ -15,7 +22,11 @@ window.addEventListener('DOMContentLoaded', function(e) {
 
    var iFrame = document.getElementById( 'food-habbits-iframe' );
    resizeIFrameToFitContent( iFrame, 300 );
+
+   $("#bad-habbits-iframe").contents().find("div.xpWfed").remove();
 } );
+
+
 
 </script>
 <style>
@@ -23,8 +34,19 @@ iframe {
 min-width: 300px;
 max-width: 480px;
 }
+h1 {
+padding-top: 70px;
+padding-bottom: 20px;
+margin-left: 2em;
+font-size: 3em;
+font-family: 'docs-Roboto', Helvetica, Arial, sans-serif;
+letter-spacing: 0;
+font-weight: 400;
+}
 </style>
+<H1> Habbits </H1>
 <div style="display:flex;flex-wrap:wrap;">
+	<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQQdjtYHduSEKz7EO0tT2C_lhwQY8aMsbK41lRINLDd1ScywX4pWxnxSRd3nnqCGQjOaj7NawstU0Bb/pubchart?oid=808559336&amp;format=interactive"></iframe>
 
 	<iframe id="good-habbits-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLSdVd8KU7HR69B50ajJ-PtdcoAv8wDbOJVcbhQC8w9OPeFHGpA/viewform?embedded=true" width="640" height="622" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
@@ -32,3 +54,4 @@ max-width: 480px;
 
 	<iframe id="food-habbits-iframe" src="https://docs.google.com/forms/d/e/1FAIpQLScKaYOEMAxxyge-dgKI42FL_r1j3l6zbNd3q8BLioFniBzYBg/viewform?embedded=true" width="640" height="941" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
+</body>
